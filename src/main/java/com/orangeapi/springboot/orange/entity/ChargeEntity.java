@@ -33,4 +33,10 @@ public class ChargeEntity {
 
     @Column(name = "charge_type")
     private String chargeType;
+
+    @Column(name = "rate")
+    private double rate;
+
+    @Column(name = "open")
+    private String open;
 }

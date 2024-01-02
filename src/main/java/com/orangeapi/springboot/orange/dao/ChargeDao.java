@@ -3,6 +3,7 @@ package com.orangeapi.springboot.orange.dao;
 import com.orangeapi.springboot.orange.entity.ChargeEntity;
 import com.orangeapi.springboot.orange.repository.ChargeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.geo.Distance;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,5 +20,9 @@ public class ChargeDao {
 
     public ChargeEntity saveData(ChargeEntity charge){
         return chargeRepo.save(charge);
+    }
+
+    public List<ChargeEntity> gitDistance (double lat , double lng){
+        return  chargeRepo.distance(lat, lng);
     }
 }
